@@ -1,5 +1,5 @@
 .user-details {
-	padding: 60px 0;
+	padding: 40px 0;
 	background-color: lighten($color-alt-background, 14);
 	color: $color-background;
 
@@ -18,8 +18,8 @@
 	// }
 
 	.user-avatar {
-		width: 157px;
-		height: 157px;
+		width: 120px;
+		height: 120px;
 		border-radius: 50%;
 		display: block;
 		margin: 0 auto;
@@ -28,7 +28,7 @@
 
 	.user-username {
 		font-size: 1.8em;
-		padding-top: 20px;
+		padding-top: 5px;
 		margin: 0;
 	}
 

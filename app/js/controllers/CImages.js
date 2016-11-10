@@ -14,7 +14,7 @@
 			{
 				vm.imageList = imageData.data.images;
 
-				// console.log(vm.imageList);
+				console.log(vm.imageList);
 			});
 		})
 
