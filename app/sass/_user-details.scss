@@ -17,24 +17,35 @@
 	// 	filter: blur(10px);
 	// }
 
-	.user-avatar {
-		width: 120px;
-		height: 120px;
-		border-radius: 50%;
-		display: block;
+	.user-details-content {
+		width: 585px;
 		margin: 0 auto;
-		float: right;
-	}
 
-	.user-username {
-		font-size: 1.8em;
-		padding-top: 5px;
-		margin: 0;
-	}
+		&:after {
+			@include clearAfter();
+		}
 
-	.user-description {
-		max-width: 425px;
-		font-weight: 300;
+		.user-avatar {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			margin-right: 40px;
+			float: left;
+		}
+
+		.user-details-right {
+			float: left;
+
+			.user-username {
+				font-size: 1.8em;
+				margin: 0;
+			}
+
+			.user-description {
+				max-width: 425px;
+				font-weight: 300;
+			}
+		}
 	}
 
 }

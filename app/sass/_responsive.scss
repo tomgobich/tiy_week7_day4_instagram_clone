@@ -1,0 +1,31 @@
+@media screen and (max-width: 650px) {
+
+	.user-details {
+
+		.user-details-content {
+			width: 100%;
+
+			.user-avatar {
+				width: 120px;
+				height: 120px;
+				margin: 0 auto;
+				display: block;
+				float: none;
+			}
+
+			.user-details-right {
+				float: none;
+				text-align: center;
+
+				.user-description {
+					max-width: 80%;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+
+	}
+
+
+}
