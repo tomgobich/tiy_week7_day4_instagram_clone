@@ -1,24 +1,27 @@
 <div class="col-md-6 offset-md-3 post">
 	<h3 class="page-title">Post A New Image</h3>
-	<form novalidate ng-submit="controller.postImage()">
+	<form novalidate name="postImage" ng-submit="controller.postImage(postImage.$valid)">
 		<label for="title" class="input-label">Image Title:</label>
 		<input 	type="text"
 				class="input-text"
 				name="title"
 				ng-model="controller.postData.title"
-				placeholder="Super Awesome Image">
+				placeholder="Super Awesome Image"
+				required>
 
 		<label for="url" class="input-label">Image URL:</label>
-		<input 	type="text"
+		<input 	type="url"
 				class="input-text"
 				name="url"
 				ng-model="controller.postData.url"
-				placeholder="http://instagram.com/adsfasd">
+				placeholder="http://instagram.com/adsfasd"
+				required>
 
 		<label for="description" class="message-label">Image Description</label>
 		<textarea 	class="message-text"
 					name="description"
-					ng-model="controller.postData.description">
+					ng-model="controller.postData.description"
+					required>
 		</textarea>
 
 		<button type="submit" class="btn btn-post">Submit Image</button>

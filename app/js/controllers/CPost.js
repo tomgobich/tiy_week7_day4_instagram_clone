@@ -12,11 +12,16 @@
 			{
 				if(isValid)
 				{
-					console.log(vm.postData);
+					let response = FApi.postImage(vm.postData);
+
+					response.then(function(callResponse)
+					{
+						console.log(callResponse);
+					});
 				}
 				else
 				{
-					alert('not valid');
+					alert('Please ensure all fields are valid and try again.');
 				}
 			}
 
