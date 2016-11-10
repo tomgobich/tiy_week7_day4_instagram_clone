@@ -1,0 +1,29 @@
+.main-body {
+	margin-top: 40px;
+
+	.image-block {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 30px;
+
+		&:hover {
+
+			.like-count {
+				right: 20px;
+				opacity: 1;
+			}
+		}
+
+		.post-image {
+			border-radius: 10%;
+		}
+
+		.like-count {
+			position: absolute;
+			right: -60px;
+			bottom: 20px;
+			opacity: 0;
+			transition: all .3s ease;
+		}
+	}
+}

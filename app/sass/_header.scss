@@ -1,0 +1,27 @@
+header {
+	background-color: $color-alt-background;
+
+	nav {
+
+		ul {
+			text-align: center;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				color: $color-background;
+				display: inline-block;
+				padding: 3px 10px;
+				margin: 7px 5px;
+				border-radius: 6px;
+
+				&:hover,
+				&.active {
+					background-color: lighten($color-alt-background, 10);
+				}
+			}
+		}
+	}
+
+}
