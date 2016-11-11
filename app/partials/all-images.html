@@ -1,10 +1,13 @@
 <div class="col-sm-4 col-md-3" ng-repeat="image in controller.imageList">
 	<div class="image-block">
-		<div class="post-image" ng-style="{'background-image': 'url({{ image.url }})'}"></div>
+		<div class="post-image" ui-sref="singlePost({id: image._id})" ng-style="{'background-image': 'url({{ image.url }})'}"></div>
 		<div class="like-count">
 			<h4 class="post-title">{{ image.title }}</h4>
-			<i class="fa fa-heart-o" aria-hidden="true"></i>
-			<span>{{ image.likes }}</span>
+			<div class="like-wrap" ng-click="controller.likeImage(image._id)">
+				<i ng-show="image.likes > 0" class="fa fa-heart" aria-hidden="true"></i>
+				<i ng-hide="image.likes > 0" class="fa fa-heart-o" aria-hidden="true"></i>
+				<span>{{ image.likes }}</span>
+			</div>
 		</div>
 	</div>
 </div>

@@ -3,19 +3,25 @@
 	'use strict';
 
 	angular.module('app')
-		.controller('CImages', function(FApi)
+		.controller('CSinglePost', function(FApi, $state, $stateParams)
 		{
 
 			let vm = this;
 
-			// Get all images from API
-			let allImages = FApi.getAllImages();
+			// Get ID from url
+			let id = $stateParams.id;
 
-			// Once returned...
-			allImages.then(function(imageData)
+			// Get single image using ID from API
+			let singleImage = FApi.getSingleImage(id);
+
+			// Once returned from API call...
+			singleImage.then(function(imageResponse)
 			{
 				// Target the needed data
-				vm.imageList = imageData.data.images;
+				vm.imageData = imageResponse.data;
+
+				// Change posted date to moment from now time
+				vm.imagePosted = moment(vm.imageData.posted).fromNow();
 			});
 
 
@@ -32,19 +38,11 @@
 				// Once returned...
 				response.then(function(responseData)
 				{
-					// If successful
+					// If returned successfull
 					if(responseData.data.success)
 					{
-						// Loop through image list
-						vm.imageList.forEach(function(image, index)
-						{
-							// Find ID match
-							if(image._id == imageID.toString())
-							{
-								// Locally increment like count
-								image.likes++;
-							}
-						});
+						// Locally update the like count
+						vm.imageData.likes++;
 					}
 				});
 			}

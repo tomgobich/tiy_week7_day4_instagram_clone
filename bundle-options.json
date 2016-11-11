@@ -19,7 +19,8 @@
 		],
 		"js/controllers.js": [
 			"dist/js/controllers/CImages.js",
-			"dist/js/controllers/CPost.js"
+			"dist/js/controllers/CPost.js",
+			"dist/js/controllers/CSinglePost.js"
 		],
 		"js/factories.js": [
 			"dist/js/factories/FApi.js",

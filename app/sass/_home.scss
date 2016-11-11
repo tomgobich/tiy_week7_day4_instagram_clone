@@ -24,14 +24,8 @@
 			}
 		}
 
-		.post-image {
-			width: 100%;
-			height: 0px;
-			padding-bottom: 100%;
-			background-size: auto 100%;
-			background-position: center;
-			border-radius: 10%;
-			transition: all .5s ease;
+		.like-wrap {
+			cursor: pointer;
 		}
 
 		.like-count {

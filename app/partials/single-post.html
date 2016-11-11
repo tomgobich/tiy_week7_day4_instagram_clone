@@ -1,0 +1,17 @@
+<div class="single-post">
+	<div class="col-xs-12 col-md-6 col-xl-4 offset-xl-2">
+		<div class="post-image" ng-style="{'background-image': 'url(' + controller.imageData.url + ')'}"></div>
+		<div class="like-count">
+			<div class="like-wrap" ng-click="controller.likeImage(image._id)">
+				<i ng-show="controller.imageData.likes > 0" class="fa fa-heart" aria-hidden="true"></i>
+				<i ng-hide="controller.imageData.likes > 0" class="fa fa-heart-o" aria-hidden="true"></i>
+				<span>{{ controller.imageData.likes }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6 col-xl-4">
+		<h2 class="post-title">{{ controller.imageData.title }}</h2>
+		<h5 class="post-posted">Posted by {{controller.imageData.user }} {{ controller.imagePosted }}</h5>
+		<p class="post-description">{{ controller.imageData.description }}</p>
+	</div>
+</div>

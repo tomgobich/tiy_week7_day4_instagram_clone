@@ -26,6 +26,23 @@
 
 
 			// ------------------------------------------------------------
+			// Name: getSingleImage
+			// Abstract: Gets details for a single image
+			// ------------------------------------------------------------
+			const getSingleImage = function(id)
+			{
+				let call = $http({
+					method: 'GET',
+					headers: {'X_CSRF_TOKEN': 'tom'},
+					url: `http://instagramcloneclass.herokuapp.com/images/${id}`,
+				})
+
+				return call;
+			}
+
+
+
+			// ------------------------------------------------------------
 			// Name: postImage
 			// Abstract: Posts a new image
 			// ------------------------------------------------------------
@@ -47,9 +64,30 @@
 
 
 
+			// ------------------------------------------------------------
+			// Name: likeImage
+			// Abstract: Increments image's like count by one
+			// ------------------------------------------------------------
+			const likeImage = function(imageID)
+			{
+				let call = $http({
+					method: 'POST',
+					data: {
+						'imageid': imageID,
+					},
+					url: `http://instagramcloneclass.herokuapp.com/images/vote`,
+				})
+
+				return call;
+			}
+
+
+
 			return {
 				getAllImages,
+				getSingleImage,
 				postImage,
+				likeImage,
 			}
 		})
 })();

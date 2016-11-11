@@ -4,23 +4,6 @@
 
 	angular
 	.module('app', ['ui.router'])
-	// .directive('currentWeather', function (FApi, FWeather)
-	// {
-	// 	return {
-	// 		restrict: 'E',
-	// 		templateUrl:"partials/current-weather.html",
-	// 		scope: {
-	//             location: '@'
-	//         },
-	// 		link: function (vm, element, attrs)
-	// 		{
-	//
-	// 		}
-	// 	};
-	//
-	//
-	//
-	// })
 	.config(appConfig);
 
 	appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -39,6 +22,13 @@
 			url:			'/post',
 			templateUrl:	'partials/post.html',
 			controller:		'CPost',
+			controllerAs:	'controller'
+		})
+		.state('singlePost',
+		{
+			url:			'/post/:id',
+			templateUrl:	'partials/single-post.html',
+			controller:		'CSinglePost',
 			controllerAs:	'controller'
 		})
 
