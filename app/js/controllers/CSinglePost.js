@@ -8,6 +8,8 @@
 
 			let vm = this;
 
+			let $largeLikeIcon = $('#largeLikeIcon');
+
 			// Get ID from url
 			let id = $stateParams.id;
 
@@ -41,10 +43,22 @@
 					// If returned successfull
 					if(responseData.data.success)
 					{
+						$largeLikeIcon.addClass('iconLikeAnimation');
+
 						// Locally update the like count
 						vm.imageData.likes++;
+
+						setInterval(removeAnimationClass, 3000);
 					}
+
+
 				});
+			}
+
+
+			const removeAnimationClass = function()
+			{
+				$largeLikeIcon.removeClass('iconLikeAnimation');
 			}
 		})
 
