@@ -1,0 +1,37 @@
+<div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 post">
+	<h3 class="page-title">Post A New Image</h3>
+	<div class="alert alert-success" ng-show="controller.isSuccessfullyPosted">
+		<button type="button" class="close" ng-click="controller.isSuccessfullyPosted = false">x</button>
+		<strong>{{ controller.postResponseMessage }}</strong>
+	</div>
+	<div class="alert alert-danger" ng-show="controller.isRejectedPost">
+		<button type="button" class="close" ng-click="controller.isRejectedPost = false">x</button>
+		<strong>{{ controller.postResponseMessage }}</strong>
+	</div>
+	<form novalidate name="postImage" ng-submit="controller.postImage(postImage.$valid, postImage)">
+		<label for="title" class="input-label">Image Title:</label>
+		<input 	type="text"
+				class="input-text"
+				name="title"
+				ng-model="controller.postData.title"
+				placeholder="Super Awesome Image"
+				required>
+
+		<label for="url" class="input-label">Image URL:</label>
+		<input 	type="url"
+				class="input-text"
+				name="url"
+				ng-model="controller.postData.url"
+				placeholder="http://instagram.com/adsfasd"
+				required>
+
+		<label for="description" class="message-label">Image Description</label>
+		<textarea 	class="message-text"
+					name="description"
+					ng-model="controller.postData.description"
+					required>
+		</textarea>
+
+		<button type="submit" class="btn btn-post">Submit Image</button>
+	</form>
+</div>
