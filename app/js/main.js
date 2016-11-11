@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-	.module('app', ['ui.router'])
+	.module('app', ['ui.router', 'ngAnimate'])
 	.config(appConfig);
 
 	appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
