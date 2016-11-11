@@ -1,9 +1,10 @@
-<div class="col-sm-4 col-md-3">
+<div class="col-sm-4 col-md-3" ng-repeat="image in controller.imageList">
 	<div class="image-block">
-		<img class="post-image" src="http://placehold.it/400x400">
+		<div class="post-image" ng-style="{'background-image': 'url({{ image.url }})'}"></div>
 		<div class="like-count">
+			<h4 class="post-title">{{ image.title }}</h4>
 			<i class="fa fa-heart-o" aria-hidden="true"></i>
-			<span>102</span>
+			<span>{{ image.likes }}</span>
 		</div>
 	</div>
 </div>

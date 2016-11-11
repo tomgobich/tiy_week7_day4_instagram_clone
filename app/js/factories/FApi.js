@@ -16,7 +16,7 @@
 			{
 				let call = $http({
 					method: 'GET',
-					Header: {'X_CSRF_TOKEN': 'tom'},
+					headers: {'X_CSRF_TOKEN': 'tom'},
 					url: `http://instagramcloneclass.herokuapp.com/images`,
 				})
 
@@ -40,7 +40,7 @@
 						'url': imageData.url,
 						'description': imageData.description,
 					},
-					Header: {'X_CSRF_TOKEN': 'tom'},
+					headers: {'X_CSRF_TOKEN': 'tom'},
 					url: `http://instagramcloneclass.herokuapp.com/image/post`,
 				})
 

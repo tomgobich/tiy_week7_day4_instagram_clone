@@ -1,51 +1,20 @@
 .user-details {
-	padding: 40px 0;
-	background-color: lighten($color-alt-background, 14);
-	color: $color-background;
+	padding: 30px 0;
+	text-align: center;
+	color: $color-alt-background;
 
-	// &:before {
-	// 	content: "";
-	// 	width: 100%;
-	// 	height: 200px;
-	// 	display: block;
-	// 	position: fixed;
-	// 	left: 0;
-	// 	right: 0;
-	// 	z-index: -1;
-	// 	background-image: url('../images/avatar.jpg');
-	// 	background-size: cover;
-	// 	filter: blur(10px);
-	// }
-
-	.user-details-content {
-		width: 585px;
-		margin: 0 auto;
-
-		&:after {
-			@include clearAfter();
-		}
-
-		.user-avatar {
-			width: 120px;
-			height: 120px;
-			border-radius: 50%;
-			margin-right: 40px;
-			float: left;
-		}
-
-		.user-details-right {
-			float: left;
-
-			.user-username {
-				font-size: 1.8em;
-				margin: 0;
-			}
-
-			.user-description {
-				max-width: 425px;
-				font-weight: 300;
-			}
-		}
+	.logo {
+		font-family: 'Leckerli One', cursive;
+		font-size: 4em;
+		margin: 0;
 	}
 
+	.sublogo {
+		font-size: 1.4em;
+		text-transform: uppercase;
+		margin: 0;
+		position: relative;
+		left: 53px;
+		top: -24px;
+	}
 }
