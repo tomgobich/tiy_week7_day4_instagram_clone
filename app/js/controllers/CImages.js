@@ -14,8 +14,11 @@
 			// Once returned...
 			allImages.then(function(imageData)
 			{
-				// Target the needed data
-				vm.imageList = imageData.data.images;
+				// Target needed data within returned data
+				let fullImageList = imageData.data.images;
+
+				// Filter out bad links
+				vm.imageList = verifyImageType(fullImageList);
 			});
 
 
@@ -49,5 +52,22 @@
 				});
 			}
 		})
+
+
+
+		const verifyImageType = function(list)
+		{
+			let filteredList = list.filter(function(item)
+			{
+				// Url image match type jpeg, jpg, gif, or png?
+				if(item.url.match(/\.(jpeg|jpg|gif|png)$/) != null)
+				{
+					// Yes, keep the item
+					return item;
+				}
+			});
+
+			return filteredList;
+		}
 
 })();

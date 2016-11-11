@@ -24,7 +24,6 @@
 		],
 		"js/factories.js": [
 			"dist/js/factories/FApi.js",
-			"dist/js/factories/FImages.js",
 			"dist/js/factories/FLocalStorage.js"
 		],
 		"css/main-bundle.css": [
