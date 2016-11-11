@@ -25,3 +25,24 @@ header {
 	}
 
 }
+
+.logo-block {
+	padding: 30px 0;
+	text-align: center;
+	color: $color-alt-background;
+
+	.logo {
+		font-family: 'Leckerli One', cursive;
+		font-size: 4em;
+		margin: 0;
+	}
+
+	.sublogo {
+		font-size: 1.4em;
+		text-transform: uppercase;
+		margin: 0;
+		position: relative;
+		left: 53px;
+		top: -24px;
+	}
+}

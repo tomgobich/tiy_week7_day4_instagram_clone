@@ -31,8 +31,6 @@
 			// ------------------------------------------------------------
 			const postImage = function(imageData)
 			{
-				console.log(imageData);
-
 				let call = $http({
 					method: 'POST',
 					data: {

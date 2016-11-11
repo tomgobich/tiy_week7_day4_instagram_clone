@@ -87,6 +87,11 @@ img {
 button {
 	background-color: $color-alt-background;
 	color: $color-background;
+
+	&.close {
+		color: rgba(0, 0, 0, 0.6);
+		font-size: 1.4em;
+	}
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -99,13 +104,6 @@ button {
 // Header Styles
 // --------------------------------------------------
 @import '_header.scss';
-
-
-
-// --------------------------------------------------
-// User Details Styles
-// --------------------------------------------------
-@import '_user-details.scss';
 
 
 
